@@ -1,6 +1,7 @@
 gsap.to("h1", {
     x: 400,
-    duration: 3
+    duration: 3,
+    color: "green"
 });
 
 
@@ -11,18 +12,13 @@ gsap.to(".star", {
     fill: "yellow",
     duration: 5,
     stagger: 0.2
-    // speed:9
 })
 
 
 gsap.to(".s-1", {
-    x: 500,
-    // scale: 6,
-    rotationY: 45,
-    fill: "yellow",
-    duration: 5,
-    stagger: 0.2
-    // speed:9
+    skewX: 10,
 })
-// gsap.default({ duration: 1 })
 
+gsap.to(".s-2", {
+    width: 20
+})
