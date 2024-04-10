@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    /* width: 100vw; */
+    border: 1px dashed;
+}
+
+.star {
+    height: 100px;
+    width: 100px;
+}
+
+
+div {
+    border: 1px dashed red;
+    width: 100%;
+}
+
+h1 {
+    width: 200px;
+    border: 1px dashed;
+}
+
+.star {
+
+    border: 1px dashed;
+    /* Set explicit width */
+    /* position: absolute; */
+    /* Or any other positioning you require */
+}
