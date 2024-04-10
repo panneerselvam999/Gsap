@@ -1,8 +1,8 @@
-gsap.to("h1", {
-    x: 400,
-    duration: 3,
-    color: "green"
-});
+// gsap.to("h1", {
+//     x: 400,
+//     duration: 3,
+//     color: "green"
+// });
 
 
 gsap.to(".star", {
@@ -29,7 +29,8 @@ gsap.from(".s-3", {
     rotation: 360,
     fill: "yellow",
     duration: 5,
-    stagger: 0.2
+    stagger: 0.2,
+    // yoyo: ture,
 })
 
 gsap.fromTo(".s-3",
@@ -48,3 +49,28 @@ gsap.fromTo(".s-3",
         duration: 2,
         stagger: 0.2
     })
+
+// special properties delay and repeat
+gsap.to("h1", {
+    x: 400,
+    duration: 3,
+    delay: 2,
+    color: "green"
+});
+// gsap.to("h2", {
+//     repeat: 1,
+//     x: 400,
+//     duration: 3,
+//     delay: 2,
+//     color: "green"
+// });
+gsap.to("h2", {
+    // repeat: 1,
+    repeat: -1,
+    repeatDelay: 2,
+    yoyo: true,
+    x: 400,
+    duration: 3,
+    delay: 2,
+    color: "green"
+});
