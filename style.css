@@ -75,3 +75,32 @@ p:nth-child(odd) {
     display: grid;
     place-items: center;
 }
+
+
+
+/* tween control - start */
+img {
+    display: block;
+}
+
+​ #nav {
+    margin-top: 20px;
+}
+
+​ button {
+    border-radius: 10px;
+    background: #fc3;
+    color: #06c;
+    font-size: 14px;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+
+}
+
+​ button:focus {
+    outline: none;
+    background-color: white;
+}
+
+/* tween control - end */

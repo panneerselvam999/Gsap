@@ -158,9 +158,13 @@ gsap.to(".back-inOut", {
     x: 500,
     duration: 3,
     ease: "back.inOut",
+    startTime: 3,
+    onStart: printHellow,
 });
 
-
+function printHellow() {
+    console.log("on start");
+}
 // stagger
 
 gsap.to(".stagger", {
@@ -179,3 +183,32 @@ gsap.to(".stagger", {
     }
 
 })
+
+
+// tween control - start
+document.addEventListener('click', function (event) {
+    if (event.target.matches('button')) {
+        event.target.focus()
+    }
+})
+
+
+var tween = gsap.to(".green", { duration: 3, x: 600, ease: "linear", paused: true });
+
+
+document.getElementById("play").onclick = () => tween.play();
+document.getElementById("pause").onclick = () => tween.pause();
+document.getElementById("reverse").onclick = () => tween.reverse();
+document.getElementById("restart").onclick = () => tween.restart();
+
+// var img = gsap.to(".fred", {
+//     x: 600,
+//     ease: "bounce",
+//     duration: 3,
+//     paused: true
+// })
+
+// function play() {
+//     img.play();
+// }
+// tween control - end
