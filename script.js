@@ -159,3 +159,23 @@ gsap.to(".back-inOut", {
     duration: 3,
     ease: "back.inOut",
 });
+
+
+// stagger
+
+gsap.to(".stagger", {
+    x: 400,
+    // stagger: 1,
+    // stagger: 0.5
+    // stagger: 0.1,
+    // staggerAxis:"y",
+    // staggerDirection:"end"
+    stagger: {
+        each: 0.2,
+        // amount:4
+        // from: "end"
+        // from: "center"
+        from: "edges"
+    }
+
+})

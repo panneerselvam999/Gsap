@@ -16,7 +16,8 @@ body {
 }
 
 
-div {
+.ease-main,
+.text {
     border: 1px dashed red;
     width: 100%;
 }
@@ -57,6 +58,20 @@ p {
 p:nth-child(even) {
     background-color: green;
 }
+
 p:nth-child(odd) {
     background-color: red;
+}
+
+.stagger-box {
+    border: 1px solid orangered;
+}
+
+.stagger {
+    border: 1px solid;
+    width: fit-content;
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-items: center;
 }
