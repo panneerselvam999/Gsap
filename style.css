@@ -21,8 +21,9 @@ div {
     width: 100%;
 }
 
-h1 {
-    width: 200px;
+h1,
+h2 {
+    width: fit-content;
     border: 1px dashed;
 }
 
@@ -32,4 +33,30 @@ h1 {
     /* Set explicit width */
     /* position: absolute; */
     /* Or any other positioning you require */
+}
+
+/* ease method */
+.ease-main {
+    width: 100%;
+    border: 2px solid green;
+}
+
+/* .ease {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+} */
+
+p {
+    font-size: 30px;
+    width: fit-content;
+    border: 1px dashed;
+    color: white;
+}
+
+p:nth-child(even) {
+    background-color: green;
+}
+p:nth-child(odd) {
+    background-color: red;
 }
