@@ -212,3 +212,32 @@ document.getElementById("restart").onclick = () => tween.restart();
 //     img.play();
 // }
 // tween control - end
+
+
+// timeline - start
+gsap.set("#demo", {
+    scale: .9,
+});
+gsap.timeline()
+    .from("#demo", { opacity: 0, duration: 1 })
+    .from("#title", { opacity: 0, scale: 0, ease: "back", duration: 2 })
+    .from("#freds img", { y: 160, ease: "back", stagger: 0.1, })
+    .from("#time", { xPercent: 100, })
+
+
+var time = 2;
+
+var position = gsap.timeline();
+position
+    .to("#star", { duration: 2, x: 500 })
+    // .to("#circle", { duration: 1, x: 500 }, "-=2")
+    // .to("#circle", { duration: 3, x: 500 }, "+=1")
+    .to("#circle", { duration: 3, x: 500 }, 3)
+    // .to("#circle", { duration: 1, x: 500 }, "time=1")
+    // .to("#box", { duration: 1, x: 500 })
+    // .to("#box", { duration: 1, x: 500 }, "-=1")
+    // .to("#box", { duration: 1, x: 500 }, "<")
+    .to("#box", { duration: 1, x: 500 }, "1")
+
+
+// timeline - end
