@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>time line</title>
+    <style>
+        body {
+            color: white;
+            font-family: "Kanit", sans-serif;
+            background: #020202;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #demo {
+            overflow: hidden;
+            position: relative;
+            width: 800px;
+            height: 410px;
+            border: 1px solid #333;
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/space-background.png);
+        }
+
+        #title {
+            position: absolute;
+            top: 120px;
+            left: 40px;
+        }
+
+        #freds {
+            position: absolute;
+            top: 250px;
+            left: 20px;
+        }
+
+        #freds img {
+            width: 122px;
+        }
+
+        #time {
+            position: absolute;
+            top: 25px;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:200,400,500&display=swap" rel="stylesheet" />
+    <div id="demo">
+        <img id="title" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/meet-the-freds.png" alt="" />
+        <div id="freds">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred.svg" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred-purple.svg" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred-blue.svg" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred-pink.svg" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred-orange.svg" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/fred-red.svg" />
+        </div>
+        <img id="time" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/32887/time.png" />
+    </div>
+
+    <!-- gsap cdn - start -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- gsap cdn - end -->
+    <script>
+        gsap.set("#demo", {
+            scale: .9,
+        });
+        gsap.timeline()
+            .from("#demo", { opacity: 0, duration: 1 })
+            .from("#title", { opacity: 0, scale: 0, ease: "back", duration: 2 })
+            .from("#freds img", { y: 160, ease: "back", stagger: 0.1, })
+            .from("#time", { xPercent: 100, })
+    </script>
+</body>
+
+</html>
